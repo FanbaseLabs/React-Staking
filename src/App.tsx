@@ -1,24 +1,18 @@
 import React from 'react';
-import logo from './logo.svg';
+import StakingWidget from 'fanbase-staking-widget';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className='flex justify-center'>
+        <div className='flex'>
+          <StakingWidget 
+            appId='0x3946fb7bd818532c15370fe059de80783d3fae31070dd3e0730838fd20cb1aa5' // Access key from plan.fanase.io
+            chainId={80001} // Plan registered chain id
+          />
+        </div>
+      </div>
     </div>
   );
 }
